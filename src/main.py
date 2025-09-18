@@ -6,7 +6,7 @@ from web3 import Web3
 # Your local HLX node's RPC endpoint
 RPC_URL = "http://127.0.0.1:8545"
 # The validator address to monitor
-VALIDATOR_ADDRESS = 'YOUR_VALIDATOR_ADDRESS_WITH_0x'
+VALIDATOR_ADDRESS = '0xdd80Be0034fC89Efa2294a135de2F89048Af530f'
 # The burn address
 BURN_ADDRESS = '0x000000000000000000000000000000000000dEaD'
 
