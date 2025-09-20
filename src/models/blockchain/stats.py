@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import List, Optional
 
 class BlockchainStats(BaseModel):
@@ -31,3 +31,13 @@ class Block(BaseModel):
     parentHash: str
     timestamp: int
     transactions: List[str]
+
+
+
+class SendTransactionRequest(BaseModel):
+    to_address: str = Field(..., description="The recipient's wallet address.")
+    value: float = Field(..., gt=0, description="The amount of HLX to send (must be greater than 0).")
+
+class SendTransactionResponse(BaseModel):
+    status: str
+    transaction_hash: str
